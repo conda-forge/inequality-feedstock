@@ -1,11 +1,11 @@
-About inequality
-================
+About inequality-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/inequality-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/pysal/inequality
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/inequality-feedstock/blob/main/LICENSE.txt)
 
 Summary: Spatial inequality analysis for PySAL A library of spatial analysis functions.
 
@@ -152,5 +152,6 @@ Feedstock Maintainers
 
 * [@jGaboardi](https://github.com/jGaboardi/)
 * [@knaaptime](https://github.com/knaaptime/)
+* [@martinfleis](https://github.com/martinfleis/)
 * [@sjsrey](https://github.com/sjsrey/)
 
