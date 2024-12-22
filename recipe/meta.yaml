@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "inequality" %}
 {% set version = "1.0.1" %}
 
@@ -6,27 +7,29 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: d42fc0d605228b52dc65b7988c95390c9035cd9f5060f61aab1c6b3bb9b519c3
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - pip
     - setuptools >=61.0
     - setuptools-scm >=6.2
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - libpysal >=4.5
     - scipy >=1.8
     - numpy >=1.23
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - inequality
 
