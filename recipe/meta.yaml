@@ -1,18 +1,18 @@
 {% set python_min = "3.11" %}
 {% set name = "inequality" %}
-{% set version = "1.1.2" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2010253c26cfe3745d36beb02aeff5503e1b21cb06e1d52aa7f13c37acd9adf1
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: acdfb22513cf278ee273942d71e0a6a1ba40e1da4a9e0a657cb1a032df3eb646
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
